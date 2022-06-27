@@ -1,0 +1,1020 @@
+/* WebSite Name: Gorle Events
+   Made by: Ritesh Gorle
+   Created: Feb 2022
+   Content: Event Management
+*/
+
+/*****************************************
+Table Of Contents:
+
+01. BASIC CSS Style
+02. PRELOADER
+03. FANCY SCROLLBAR 
+04. SECTION 02 NAVIGATION BAR
+05. SECTION 02 SIGN UP BUTTON
+06. SECTION 03 GLOWING TEXT
+07. SECTION 03 TEXT ON IMAGE
+08: TYPEWRTING TEXT START
+09. SECTION 05:TEXT AND THREE IMAGES
+10. SECTION 07:OUR PLANS
+11. SECTION 08:  CLEARFIX TWO IMAGES
+12. SECTION 09:  TESTIMONIALS
+13. SECTION 10: IMAGE OF LOCATION/MAP START  
+14. SECTION 10 FOOTER
+15. Media Queries HIDE/SHOW BY ID
+
+******************************************/
+
+
+/******************************/
+/*    01. BASIC CSS Style     */
+/******************************/
+
+
+body {font-family: "Lato", sans-serif;
+  
+
+}
+
+
+
+/******************************/
+/*     02. PRELOADER          */
+/******************************/
+
+/* Preloader */
+.container-preloader {
+  align-items:center; cursor:none; display:flex; height:100%;
+  justify-content:center; position:fixed; left:0; top:0; width:100%; z-index:900;
+}
+.container-preloader .animation-preloader {
+  position:absolute; z-index: 100;}
+/* Spinner Loading */
+.container-preloader .animation-preloader .spinner {
+  animation: spinner 1s infinite linear;
+  border-radius: 50%;  border: 10px solid rgba(0, 0, 0, 0.2);
+  border-top-color: green; /* It is not in alphabetical order so that you do not overwrite it */
+  height: 9em;  margin: 0 auto 3.5em auto; width: 9em;
+}
+/* Loading text */
+.container-preloader .animation-preloader .txt-loading {
+  font: bold 5em 'Montserrat', sans-serif;
+  text-align: center; user-select: none;
+}
+.container-preloader .animation-preloader .txt-loading .characters:before {
+  animation: characters 1s infinite;  color: orange;
+  content: attr(preloader-text);  left: 0;
+  opacity: 0;  position: absolute;  top: 0;
+  transform: rotateY(-90deg);
+}
+.container-preloader .animation-preloader .txt-loading .characters {
+  color: rgba(0, 0, 0, 0.2);  position: relative;
+}
+.container-preloader .animation-preloader .txt-loading .characters:nth-child(2):before {
+  animation-delay: 0.2s;
+}
+.container-preloader .animation-preloader .txt-loading .characters:nth-child(3):before {
+  animation-delay: 0.4s;
+}
+.container-preloader .animation-preloader .txt-loading .characters:nth-child(4):before {
+  animation-delay: 0.6s;
+}
+.container-preloader .animation-preloader .txt-loading .characters:nth-child(5):before {
+  animation-delay: 0.8s;
+}
+.container-preloader .animation-preloader .txt-loading .characters:nth-child(6):before {
+  animation-delay: 1s;
+}
+.container-preloader .animation-preloader .txt-loading .characters:nth-child(7):before {
+  animation-delay: 1.2s;
+}
+.container-preloader .loader-section {
+  background-color: #ffffff;  height: 100%;
+  position: fixed;  top: 0;  width: calc(50% + 1px);
+}
+.container-preloader .loader-section.section-left {
+  left: 0;
+}
+.container-preloader .loader-section.section-right {
+  right: 0;
+}
+/* Fade effect on loading animation */
+.loaded .animation-preloader {
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+/* Curtain effect */
+.loaded .loader-section.section-left {
+  transform: translateX(-101%);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+.loaded .loader-section.section-right {
+  transform: translateX(101%);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+/* Animation of the preloader */
+@keyframes spinner {
+to {
+  transform: rotateZ(360deg);
+}}
+/* Animation of letters loading from the preloader */
+@keyframes characters {
+  0%,
+  75%,
+  100% {
+ opacity: 0;
+ transform: rotateY(-90deg);
+  }
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }}
+
+
+/* Laptop size back (laptop, tablet, cell phone) */
+@media screen and (max-width: 767px) {
+  /* Preloader */
+  /* Spinner Loading */ 
+  .container-preloader .animation-preloader .spinner {
+  height: 8em;
+  width: 8em;
+  }
+  /* Text Loading */
+  .container-preloader .animation-preloader .txt-loading {
+    font: bold 3.5em 'Montserrat', sans-serif;
+  }}
+@media screen and (max-width: 500px) {
+  /* Prelaoder */
+  /* Spinner Loading */
+  .container-preloader .animation-preloader .spinner {
+  height: 7em;
+  width: 7em;
+  }
+  /*Loading text */
+  .container-preloader .animation-preloader .txt-loading {
+    font: bold 2em 'Montserrat', sans-serif;
+  }}
+.origin{text-decoration:none;
+font-size:45px;}
+
+
+
+.preloader img {
+  width: 250px; height: 250px;
+  background-size: contain;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg) }
+}
+
+
+
+/******************************/
+/*    03. FANCY SCROLLBAR     */
+/******************************/
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+/****************************************/
+/*    04. SECTION 02  NAVIGATION BAR    */
+/***************************************/
+.w3-top{
+  box-shadow: 5px 5px 16px 1px;
+}
+
+.w3-bar-item, .w3-padding-large {
+  font-size: 20px;
+  font-weight: 600;
+  color: red;
+}
+
+
+
+/****************************************/
+/*    05. SECTION 02  SIGN UP BUTTON    */
+/***************************************/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.button1 {
+  background-color: #04AA6D;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin: 4px 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.button1:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.signupbtn {
+  padding: 14px 20px;
+  background-color: green;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+
+/***************************************/
+/*    06. SECTION 03 GLOWING TEXT     */
+/*************************************/
+.sec3{
+  margin-top: 120px;
+}
+
+
+.glow {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff3300, 0 0 40px #ff3300, 0 0 50px #ff3300, 0 0 60px #ff3300, 0 0 70px #ff3300;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff3300, 0 0 40px #ff3300, 0 0 50px #ff3300, 0 0 60px #ff3300, 0 0 70px #ff3300, 0 0 80px #ff3300;
+  }
+}
+
+
+/**********************************/
+/*  07. SECTION 03 TEXT ON IMAGE   */
+/**********************************/
+
+.img2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.my {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: cursive;
+
+
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+
+/* button style */
+.custo {
+  width: 130px;
+  height: 40px;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+
+/* 12 */
+.btn-1{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-1 span {
+  background: rgb(255,0,0);
+background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-1 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-1 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-1:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-1:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+
+
+/***************************************/
+/*   08: TYPEWRTING TEXT START        */
+/*************************************/
+
+.button-box-special {
+    background: #383b3a;
+}
+
+.event-btn:focus {
+    outline: none;
+}
+
+
+.event-btn {
+   width: 200px;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: red;
+    border: 2px solid red;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: color 400ms;
+    border-radius: 20px;
+}
+
+.event-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: red;
+    z-index: -1;
+    transition: transform 400ms ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 20px;
+}
+
+.event-btn:hover::before {
+   transform: scaleX(1);
+}
+
+.event-btn:hover {
+    color: #fff;
+}
+
+
+/*********************************************/
+/*  09. SECTION 05: TEXT AND THREE IMAGES    */
+/********************************************/
+
+/* image Zoom Out #1 */
+.hover05   {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.hover05:hover  {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+/* Laptop size back (laptop, tablet, cell phone) */
+@media screen and (max-width: 767px) {
+  .hover05{
+    width: 20%;
+    height: 70px;
+  }
+  
+  }
+@media screen and (max-width: 500px) {
+  .hover05{
+    width: 10%;
+    height: 70px;
+  }
+
+  .w3-third, p{
+    margin-top: 10px;
+
+  }
+  
+  }
+
+
+/***************************************/
+/*     10. SECTION 07:  OUR PLANS      */
+/*************************************/
+.sec7 {
+    background: black;
+    color: white;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    transition: all 300ms;
+}
+
+.sec7:hover {
+    color: #f44336;
+    background-color: #ffff;
+    border: 2px solid red;
+    border-radius: 50px;
+}
+
+
+/**************************************************/
+/*    11. SECTION 08:  CLEARFIX TWO IMAGES        */
+/**************************************************/
+.cent-hed{
+   color: red;
+  font-size: 60px;
+  font-weight: 900;
+  font-family: cursive;
+}
+
+.img1{
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .float-right-sm {
+    float: right;
+   }
+
+.img1{
+  width: 200px;
+}
+
+}
+
+@media (min-width: 769px) {
+  .float-right-lg {
+    float: right;
+    
+  }
+.img1{
+  width: 400px;
+}
+
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+
+/********************************************/
+/*    12. SECTION 09:  TESTIMONIALS         */
+/********************************************/
+.testimonials {
+  background: #46d246;
+  text-align: center;
+  width: 95%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.description {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 900;
+}
+
+.slider-container {
+  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  flex: 0 0 1;
+  width: 300%; /* Depends On slide-box Length * 100 */
+  transition: all 0.5s linear;
+}
+.slide-box {
+  padding: 0 80px;
+}
+.slide-box .comment {
+  background-color: red;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4px;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  font-weight: 400;
+}
+.slide-box .comment::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.slide-box img {
+  max-width: 60px;
+  border-radius: 50%;
+}
+.slide-box .name {
+  font-size: 1.7rem;
+}
+.slide-box .job {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 400;
+}
+
+.control-slider {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  line-height: 40px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+.btn-left {
+  left: 10px;
+}
+.btn-right {
+  right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .slide-box {
+    padding: 0 55px;
+  }
+}
+
+
+
+/**************************************************/
+/*  13. SECTION 10: IMAGE OF LOCATION/MAP START   */
+/**************************************************/
+.image-container {
+  background-color: #26272b;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+}
+
+.container1 {
+  display: flex;
+/*   border:1px solid red; */
+  height: 100%;
+  align-items: center;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 4px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 6s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: red;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: red;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: red;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: red;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: red
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+
+
+/******************************/
+/*   14. SECTION 10 FOOTER    */
+/******************************/
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:25px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:red;
+  background-color: red;
+  height: 1px;
+  opacity:0.9
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:red;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px;
+}
+.site-footer a
+{
+  color:#46d246;
+}
+.site-footer a:hover
+{
+  color:#FF0000;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#46d246;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#FF0000;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color: white;
+}
+.copyright-text
+{
+  margin:0;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0;
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px;
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:red;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe;
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px;
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998;
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced;
+}
+
+.social-icons a.whatsapp:hover
+{
+  background-color:green;
+}
+
+
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600;
+  }
+}
+
+
+/********************************************/
+/*    15. Media Queries HIDE/SHOW BY ID     */
+/********************************************/
+    
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  #my-content { display: none; }  /* hide it elsewhere */
+
+
+
+}
+
+@media screen and (min-width: 451px) and (max-width: 1200px) {
+  #my-content { display:block; }  /* show it on big screens */
+
+}
+
+
+
+/******************************/
+/*  END END END END END END   */
+/******************************/

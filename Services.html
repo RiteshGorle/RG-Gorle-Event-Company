@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Gorle Event Company</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--------------------------------------------------->
+<!--------------------- W3 SCHOOL ------------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+
+<!--------------------------------------------------->
+<!--------------------- BOOTSTRAP 4 ----------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--------------------------------------------------->
+<!--------------------- FAVICON IMAGE --------------->
+<!--------------------------------------------------->
+<link rel="icon" type="image/x-icon" href="logo1.png">
+
+<!--------------------------------------------------->
+<!--------------------- FONT AWESOME ---------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--------------------------------------------------->
+<!------------------------ CSS ---------------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+/* Center website */
+.main1 {
+  max-width: 1000px;
+  margin: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row1 {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row1,
+.row1 > .column3 {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column3 {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content1 {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column3 {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column3 {
+    width: 100%;
+  }
+
+  h1 {
+  font-size: 30px;
+  word-break: break-all;
+}
+}
+</style>
+
+
+</head>
+
+<body>
+
+  <!------------------------ SECTION 01: PRELOADER START ------------------------------------------>
+
+    <div id="preloader"> <!-------- PRELOADER ID START ------->
+
+      <div id="container" class="container-preloader"> <!-------- PRELOADER CONTAINER START ------->
+
+        <div class="animation-preloader"> <!-------- PRELOADER ANIMATION START ------->
+         
+          <div class="txt-loading"> <!-------- PRELOADER TEXT START ------->
+
+            <span preloader-text="G" class="characters">G</span>
+            
+            <span preloader-text="O" class="characters">O</span>
+            
+            <span preloader-text="R" class="characters">R</span>
+            
+            <span preloader-text="L" class="characters">L</span>
+            
+            <span preloader-text="E" class="characters">E</span>
+            
+           
+            <div class="preloader"> <!-------- PRELOADER IMAGE START ------->
+                <img src="spin.png" border="0">
+            </div><!-------- PRELOADER IMAGE END ------->
+
+
+          </div><!-------- PRELOADER TEXT END ------->
+        </div> <!-------- PRELOADER ANIMATION END ------->
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+      </div><!-------- PRELOADER CONTAINER END ------->
+    </div><!-------- PRELOADER ID END ------->
+
+<!------------------------ SECTION 01: PRELOADER END ------------------------------------------>
+
+
+<!------------------------ SECTION 02: NAVIGATION BAR START ----------------------------------->
+
+<div class="w3-top fixed-top"><!-------- SECTION 02 TOP START ------->
+
+  <div class="w3-bar w3-black w3-card"><!-------- SECTION 02 BAR START ------->
+
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item  w3-padding-large" ><img src="logo1.png" alt="Logo" style="width:30px;"></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="services.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+    <a href="Blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+
+  <div class="w3-dropdown-content w3-bar-block w3-card-4"> <!--- SECTION 02  DROPDOWN START ---->
+        <a href="services.html" class="w3-bar-item w3-button">Event Management</a>
+        <a href="services.html" class="w3-bar-item w3-button">E-mail Marketing</a>
+        <a href="services.html" class="w3-bar-item w3-button">Web Surveys</a>
+      </div><!--- SECTION 02  DROPDOWN END ---->
+
+    </div><!-------- SECTION 02 BAR END ------->
+
+
+<!-------- SECTION 02 SIGN UP BUTTON ------->
+    <button class="button1 w3-padding-large w3-hover-red w3-hide-small w3-right" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+
+<!-------- SECTION 02 SIGN UP BUTTON MODAL START------->
+    <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1 class="text-success">Sign Up</h1>
+      <p class="text-success">Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label class="text-success">
+    <input  type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+      </label>
+
+
+ <p class="text-success">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button  type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-------- SECTION 02 SIGN UP BUTTON MODAL END------->
+
+  </div><!-------- SECTION 02 BAR END ------->
+</div><!-------- SECTION 02 TOP END ------->
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+ <a href="services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!------------------------ SECTION 02: NAVIGATION BAR END ----------------------------------->
+
+
+
+<!------------------------ SECTION 03: GLOWING TEXT AND PNG START -------------------------->
+
+ <section class="sec3"> <!------ SECTION 03: GLOWING TEXT AND PNG SECTION START ------>
+
+<h1 class="glow mt-5">GORLE EVENTS </h1> <!------ GLOWING TEXT ------>
+
+<br>
+<br> 
+<br>
+
+ 
+ <!------------------------ SERVICES SECTION START --------------------------> 
+
+<!-- MAIN (Center website) -->
+<div class="main1">
+
+<h1 align="Center" style="color:#46d246;">OUR SERVICES</h1>
+<hr>
+
+<h2 align="Center" style="font-weight: 600;">सेवा परमो धर्म: </h2>
+<p align="Center">आम्ही सर्व प्रकारच्या इव्हेंट मॅनेजमेंट सेवा प्रदान करतो.</p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row1">
+  <div class="column3">
+    <div class="content1">
+      <img src="event4.png" alt="Event" style="width:100%">
+      <h3>Management</h3>
+      <p align="left">आम्ही प्रचारात्मक, व्यवसाय आणि सामाजिक कार्यक्रमांचे नियोजन आणि आयोजन करतो. लक्ष्यित प्रेक्षक गुंतलेले आहेत आणि इव्हेंटचा संदेश योग्यरितीने विकला गेला आहे याची खात्री करून आम्ही विविध कार्यक्रम चालवण्यास जबाबदार आहोत.</p>
+    </div>
+  </div>
+  <div class="column3">
+    <div class="content1">
+    <img src="Email.jpg" alt="mail" style="width:100%">
+      <h3>E-mail Marketing</h3>
+      <p align="left">ईमेल मार्केटिंग हा मार्केटिंगचा एक प्रकार आहे जो ग्राहकांना नवीन उत्पादने, सवलती आणि इतर सेवांबद्दल जागरूक करू शकतो. तुमच्या ब्रँडच्या मूल्याबद्दल तुमच्या प्रेक्षकांना शिक्षित करण्यासाठी किंवा त्यांना खरेदी दरम्यान गुंतवून ठेवण्यासाठी ही एक सौम्य विक्री देखील असू शकते.</p>
+    </div>
+  </div>
+  <div class="column3">
+    <div class="content1">
+    <img src="survey.png" alt="Survey" style="width:100%">
+      <h3>Web Surveys</h3>
+      <p align="left">वेब सर्वेक्षणे किंवा इंटरनेट सर्वेक्षणांची व्याख्या डेटा संकलन पद्धत म्हणून केली जाते जिथे सर्वेक्षण किंवा प्रश्नावली इंटरनेटवरून प्रतिसादकर्त्यांच्या नमुन्यासाठी पाठवली जाते आणि ते या सर्वेक्षणाला वर्ल्ड वाइड वेबवर प्रतिसाद देऊ शकतात.</p>
+    </div>
+  </div>
+  <div class="column3">
+    <div class="content1">
+    <img src="wedding1.png" alt="Wedding" style="width:100%">
+      <h3>Wedding</h3>
+      <p align="left">आम्ही सर्व प्रकारचे लग्न कार्यक्रम जसे की, एंगेजमेंट पार्टी, ब्राइडल शॉवर किंवा कपल्स शॉवर, बॅचलर पार्टी आणि बॅचलोरेट पार्टी, ब्राइड्समेड लंच आणि ग्रूम्समन लंच, वेलकम पार्टी, रिहर्सल डिनर, लग्न समारंभ आणि रिसेप्शन, After party.</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<div class="content1">
+  <img src="event3.png" alt="Event" style="width:100%">
+  <h3>We Are Planners</h3>
+  <p>एखाद्या कंपनीसाठी किंवा इतर प्रकारच्या व्यवसायासाठी काम करत असले तरीही, आम्ही खात्री करतो की इव्हेंटशी संबंधित प्रत्येक गोष्टीची काळजी घेतली जाईल, कल्पना संकल्पना, तयारी आणि लॉजिस्टिक्सचा दिवस. </p>
+  <p>अनुभव निर्माण करणे आणि जीवनात दृष्टान्त घडवून आणणे यासाठी आम्ही अनेक कार्ये करण्यात पारंगत आहोत.</p>
+</div>
+
+<!-- END MAIN -->
+</div>
+<!------------------------ SERVICES SECTION END --------------------------> 
+ 
+</section><!------ SECTION 03: GLOWING TEXT AND PNG SECTION END ------>
+ <br>
+ <br>
+ <br>
+
+<!----------------------- SECTION 11: FOOTER START ------------------------>
+  
+    <footer class="site-footer"> <!-- SECTION 11: SITE FOOTER START -->
+
+      <div class="container"> <!-- SECTION 11: FOOTER CONTAINER START -->
+
+        <div class="row"><!-- SECTION 11: ROW START -->
+
+
+          <!-- SECTION 11: ROW 01 -->
+          <div class="col-sm-12 col-md-6">
+            <h6>It's all about the event's.</h6>
+            <p class="text-justify text-white">For More Information? Leave us a message to get started.</p>
+          </div>
+
+          <!-- SECTION 11: ROW 02 -->
+          <div class="col-xs-6 col-md-3">
+            <h6>Services</h6>
+            <ul class="footer-links">
+              <li><a href="services.html">Event Management</a></li>
+              <li><a href="services.html">E-mail Marketing</a></li>
+              <li><a href="services.html">Web Surveys</a></li>
+            </ul>
+          </div>
+           
+          <!-- SECTION 11: ROW 03 -->
+          <div class="col-xs-6 col-md-3">
+            <h6>pages</h6>
+            <ul class="footer-links">
+              
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              
+            </ul>
+          </div>
+
+
+        </div><!-- SECTION 11: ROW END -->
+        <hr><!-- SECTION 11: HR TAG -->
+     </div><!-- SECTION 11: FOOTER CONTAINER START -->
+
+
+
+      <div class="container"><!-- SECTION 11: FOOTER COPYRIGHT START -->
+
+
+        <div class="row"><!-- SECTION 11: FOOTER COPYRIGHT ROW START -->
+       
+           <!-- SECTION 11: FOOTER COPYRIGHT ROW 1 -->
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text text-white">Copyright &copy; 2022 All Rights Reserved by 
+            <a href="https://www.coasterscorner.com/">Gorle Event's</a>.
+            </p>
+          </div>
+          
+          <!-- SECTION 11: FOOTER COPYRIGHT ROW 2 -->
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+            
+            </ul>
+          </div>
+
+
+        </div><!-- SECTION 11: FOOTER COPYRIGHT ROW END -->
+      </div><!-- SECTION 10: FOOTER COPYRIGHT END -->
+
+
+</footer><!-- SECTION 11: SITE FOOTER END -->
+
+<!----------------------- SECTION 10: FOOTER END ------------------------>
+
+
+
+<!----------------------- JAVASCRIPT ------------------------>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Gorle Event Company</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--------------------------------------------------->
+<!--------------------- W3 SCHOOL ------------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+
+<!--------------------------------------------------->
+<!--------------------- BOOTSTRAP 4 ----------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--------------------------------------------------->
+<!--------------------- FAVICON IMAGE --------------->
+<!--------------------------------------------------->
+<link rel="icon" type="image/x-icon" href="logo1.png">
+
+<!--------------------------------------------------->
+<!--------------------- FONT AWESOME ---------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--------------------------------------------------->
+<!------------------------ CSS ---------------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+
+  <!------------------------ SECTION 01: PRELOADER START ------------------------------------------>
+
+    <div id="preloader"> <!-------- PRELOADER ID START ------->
+
+      <div id="container" class="container-preloader"> <!-------- PRELOADER CONTAINER START ------->
+
+        <div class="animation-preloader"> <!-------- PRELOADER ANIMATION START ------->
+         
+          <div class="txt-loading"> <!-------- PRELOADER TEXT START ------->
+
+            <span preloader-text="G" class="characters">G</span>
+            
+            <span preloader-text="O" class="characters">O</span>
+            
+            <span preloader-text="R" class="characters">R</span>
+            
+            <span preloader-text="L" class="characters">L</span>
+            
+            <span preloader-text="E" class="characters">E</span>
+            
+           
+            <div class="preloader"> <!-------- PRELOADER IMAGE START ------->
+                <img src="spin.png" border="0">
+            </div><!-------- PRELOADER IMAGE END ------->
+
+
+          </div><!-------- PRELOADER TEXT END ------->
+        </div> <!-------- PRELOADER ANIMATION END ------->
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+      </div><!-------- PRELOADER CONTAINER END ------->
+    </div><!-------- PRELOADER ID END ------->
+
+<!------------------------ SECTION 01: PRELOADER END ------------------------------------------>
+
+
+
+
+<!------------------------ SECTION 02: NAVIGATION BAR START ----------------------------------->
+
+<div class="w3-top fixed-top"><!-------- SECTION 02 TOP START ------->
+
+  <div class="w3-bar w3-black w3-card"><!-------- SECTION 02 BAR START ------->
+
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item  w3-padding-large" ><img src="logo1.png" alt="Logo" style="width:30px;"></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="services.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+    <a href="Blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+
+  <div class="w3-dropdown-content w3-bar-block w3-card-4"> <!--- SECTION 02  DROPDOWN START ---->
+        <a href="services.html" class="w3-bar-item w3-button">Event Management</a>
+        <a href="services.html" class="w3-bar-item w3-button">E-mail Marketing</a>
+        <a href="services.html" class="w3-bar-item w3-button">Web Surveys</a>
+      </div><!--- SECTION 02  DROPDOWN END ---->
+
+    </div><!-------- SECTION 02 BAR END ------->
+
+
+<!-------- SECTION 02 SIGN UP BUTTON ------->
+    <button class="button1 w3-padding-large w3-hover-red w3-hide-small w3-right" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+
+<!-------- SECTION 02 SIGN UP BUTTON MODAL START------->
+    <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1 class="text-success">Sign Up</h1>
+      <p class="text-success">Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label class="text-success">
+    <input  type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+      </label>
+
+
+ <p class="text-success">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button  type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-------- SECTION 02 SIGN UP BUTTON MODAL END------->
+
+  </div><!-------- SECTION 02 BAR END ------->
+</div><!-------- SECTION 02 TOP END ------->
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+ <a href="services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!------------------------ SECTION 02: NAVIGATION BAR END ----------------------------------->
+
+
+
+<!------------------------ SECTION 03: GLOWING TEXT AND PNG START -------------------------->
+
+ <section class="sec3"> <!------ SECTION 03: GLOWING TEXT AND PNG SECTION START ------>
+
+<h1 class="glow mt-5">GORLE EVENTS </h1> <!------ GLOWING TEXT ------>
+
+<br>
+<br> 
+<br>
+
+  <div class="my container"> <!------ SECTION 03 TEXT ON IMAGE START ------>
+
+  <img class="img2" src="team.gif" alt="team" style="width:48%;">
+  <div id="my-content" class="bottom-left text-uppercase"><a href="services.html" title=""><button  class="custo btn-1" type=""><span>Click!</span><span>Management</span></button></a> </div>
+  <div id="my-content" class="top-left text-uppercase"><a href="services.html" title=""><button class="custo btn-1"><span>Click!</span><span>Marketing</span></button></a> </div>
+  <div id="my-content" class="top-right text-uppercase"><a href="services.html" title=""><button class="custo btn-1"><span>Click!</span><span>Weddings</span></button></a> </div>
+  <div id="my-content" class="bottom-right text-uppercase"><a href="services.html" title=""><button class="custo btn-1"><span>Click!</span><span>Corporate</span></button></a></div>
+ 
+</div><!------SECTION 03 TEXT ON IMAGE START ------>
+</section><!------ SECTION 03: GLOWING TEXT AND PNG SECTION END ------>
+ <br>
+ <br>
+ <br>
+
+<!------------------------ SECTION 03: GLOWING TEXT AND PNG END -------------------------->
+
+
+<!------------------------ SECTION 04: TYPEWRTING TEXT START -------------------------->
+<div class="button-box" align="center">
+    <button  class="event-btn" onclick="typeWriter()" >सेवा परमो धर्म:</button>
+        <br><p id="demo"></p>
+</div>
+<!------------------------ SECTION 04: TYPEWRTING TEXT END -------------------------->
+
+
+<!------------------------ SECTION 05: TEXT AND THREE IMAGES START -------------------->
+
+<!------SECTION 05 CONTAINER START ------>
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+
+ <h1 class="w3-wide" style="color:#46d246;"><strong>OUR WORK</strong></h1><!---SECTION 05 HEADING--->
+
+
+    <p class="w3-opacity"><i>We love to offer service</i></p>
+    <p class="w3-justify text-danger"><strong>Gorle Event's is a market-leading meetings, events, and hospitality technology provider with  and 21,000+ customers worldwide. Gorle events offers a complete solutions to customers for online event registration, venue selection, event management, mobile apps for events, e-mail marketing and web surveys.</strong></p>
+
+    <div class="w3-row w3-padding-32"><!------SECTION 05 IMAGES START ------>
+      <div class="w3-third">
+        <p><strong >Wedding</strong></p>
+        <img  src="wedding.png" class="hover05 mt-3 w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p><strong >Social Gathering</strong></p>
+        <img src="social.jpg" class="hover05 mt-3 w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p><strong >Corporate Events</strong></p>
+        <img src="corporate.jpg" class=" hover05 mt-3 w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+
+    </div><!------SECTION 05 CONTAINER END ------>
+
+  </div><!------SECTION 05 CONTAINER END ------>
+
+
+<!----------------------- SECTION 06: MARQUEE TAG START --------------------------------->
+
+<marquee  scrollamount="30"  direction="right"  behavior="scroll" > 
+  <img src="race.jpg" height="260"  width="600" > 
+     <img src="run.gif" height="300"  width="800" > 
+   </marquee>
+
+<!----------------------- SECTION 06: MARQUEE TAG END --------------------------------->
+
+
+<!----------------------- SECTION 07:  OUR PLANS START --------------------------------->
+
+  <div class="w3-black" id="tour"><!------- SECTION 07: ID START ------>
+
+
+   <!------- SECTION 07: CONATAINER START ------>
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+
+      <h1 class="w3-wide w3-center" style="color:#46d246;"><strong>OUR PLANS</strong></h1>
+      <p class="w3-opacity w3-center"><i>Remember to book your plan!</i></p><br>
+
+      
+      <!------- SECTION 07: THREE CARDS START ------>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+
+
+        <!------- SECTION 07:  CARDS 01 ------>
+        <div class="w3-third w3-margin-bottom">
+          <img src="event4.png" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-green" >
+            <p><b>Event Management</b></p>
+            <p class="w3-opacity">Buy and get flat <strong class="text-danger">49% off</strong> on service plan</p>
+            <p>Includes meetings, weddings, and hospitality events.</p>
+            <button class="sec7 w3-button  w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Plan</button>
+          </div>
+        </div>
+
+         
+        <!------- SECTION 07:  CARDS 02 ------>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Email.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-green">
+            <p><b>E-mail Marketing</b></p>
+            <p class="w3-opacity">Buy and get flat <strong class="text-danger">70% off</strong> on service plan</p>
+            <p>Includes advertisements, request business, solicit sales.</p>
+            <button class="sec7 w3-button  w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Plan</button>
+          </div>
+        </div>
+
+
+         <!------- SECTION 07:  CARDS 03 ------>
+        <div class="w3-third w3-margin-bottom">
+          <img src="survey.png" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-green">
+            <p><b>Web Surveys</b></p>
+            <p class="w3-opacity">Buy and get flat <strong class="text-danger">60% off</strong> on service plan</p>
+            <p >Inlcudes Screener & Survey questions.</p>
+            <button class="sec7 w3-button  w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Plan</button>
+          </div>
+        </div>
+
+
+
+      </div><!------- SECTION 07: THREE CARDS END ------>
+    </div><!------- SECTION 07: CONATAINER END ------>
+  </div><!------- SECTION 07: ID END ------>
+
+  
+<!----------------------- SECTION 07:  BUY PLAN BUTTON MODAL START -------------------------->
+
+<div id="ticketModal" class="w3-modal"><!----- SECTION 07: BUY PLAN MODAL ID START  ---->
+
+    <!----- SECTION 07: BUY PLAN MODAL CONTENT START  ---->
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide">PLANS</h2>
+      </header>
+
+      <div class="w3-container"><!----- SECTION 07: BUY PLAN MODAL CONTAINER START  ---->
+        <p><label>Buy plan, <strong>₹3000</strong> per Service</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Which Service?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+
+      </div><!----- SECTION 07: BUY PLAN MODAL CONTAINER START  ---->
+
+    </div> <!----- SECTION 07: BUY PLAN MODAL CONTENT END  ---->
+
+  </div><!----- SECTION 07: BUY PLAN MODAL ID END  ---->
+
+
+<!----------------------- SECTION 07:  OUR PLANS END --------------------------------->
+
+
+
+<!----------------------- SECTION 08:  CLEARFIX TWO IMAGES START ------------------------>
+ <div id="my-content" class="container">
+   <div class="clearfix">
+<span class="float-right-sm"><img class="img1" src="event12.jpeg" alt="San Francisco"> <br>
+
+  <div class="cent-hed" align="center">
+    <strong >Gorle Event Management</strong>
+  </div>
+
+</span>
+<br>
+
+<span class="float-right-lg"> <img class="img1" src="event22.jpg" alt="San Francisco"></span><br>
+
+</div>
+</div>
+
+<!----------------------- SECTION 08:  CLEARFIX TWO IMAGES END ------------------------>
+<br>
+
+<!----------------------- SECTION 09:  TESTIMONIALS START ------------------------>
+
+<div class="testimonials"><!-- SECTION 09: CLASS TESTIMONIALS START --->
+
+  <h2 class="title">Some Words From Our Clients</h2><!-- SECTION 09:TESTIMONIALS HEADING --->
+
+  <p class="description">We've been helping people to do their best since 2019.</p>
+
+  <div class="slider-container"><!-- SECTION 09: TESTIMONIALS CONTAINER START --->
+    <div class="slider"><!-- SECTION 09: TESTIMONIALS SLIDER START --->
+
+      <!-- SECTION 09: TESTIMONIALS SLID-BOX 01 START --->
+      <div class="slide-box">
+        <!-- Testi One -->
+        <p class="comment">
+          तुम्ही आणि तुमच्या टीमने वार्षिक उत्सव इतका नेत्रदीपक बनवून उत्कृष्ट कार्य केले, तुम्ही हे सर्व एक अतिशय संस्मरणीय बनवले आहे.
+          आमचे प्रामाणिक आभार अतिशय उत्साहाने, उर्जेने आणि तपशीलाकडे लक्ष देऊन हा विशेष प्रकल्प हाती घेतल्याबद्दल.
+        </p>
+        <img src="logo2.jpg" />
+        <h3 class="name">Bunty Gorle</h3>
+        <h4 class="job">Businessman</h4>
+      </div>
+      <!-- SECTION 09: TESTIMONIALS SLID-BOX 01 END --->
+
+      <!-- SECTION 09: TESTIMONIALS SLID-BOX 02 START --->
+      <div class="slide-box">
+        <!-- Testi Two -->
+        <p class="comment">
+          "लग्नाच्या सेलिब्रेशनमध्ये तुमच्या तज्ञांच्या सेवेबद्दल मनापासून धन्यवाद. "आम्ही तुमच्याशिवाय हे करू शकलो नसतो".असे म्हणणे 
+          म्हणजे एक अधोरेखितपणा आहे.तुम्ही आमच्यासोबत केलेल्या कामाचे आम्हाला किती कौतुक वाटते हे सांगण्यासाठी मी काय सांगू शकतो. 
+        </p>
+        <img src="ritu.jpg" />
+        <h3 class="name">Ritu Gorle</h3>
+        <h4 class="job">Housewife</h4>
+      </div>
+      <!-- SECTION 09: TESTIMONIALS SLID-BOX 02 END --->
+
+      <!-- SECTION 09: TESTIMONIALS SLID-BOX 03 START --->
+      <div class="slide-box">
+        <!-- Testi Three -->
+        <p class="comment">
+          तुम्ही आणि तुमचे कर्मचारी आमच्या रॅलीमध्ये, नियोजन, साफसफाईपर्यंतच्या अंमलबजावणीसाठी किती वेळ घालवलात ते अपवादात्मक होते.
+          हे स्पष्ट आहे की तुमचे काम आणि प्रत्येक छोट्या गोष्टीकडे लक्ष देणे याने शोच्या यशात मोठा हातभार लावला आहे.”
+        </p>
+        <img src="politician.jpg" />
+        <h3 class="name">Hanumanta Gorle</h3>
+        <h4 class="job">Politician</h4>
+      </div>
+      <!-- SECTION 09: TESTIMONIALS SLID-BOX 03 END --->
+
+    </div><!-- SECTION 09: TESTIMONIALS SLIDER END --->
+
+
+  <!-- SECTION 09: TESTIMONIALS LEFT/RIGHT ICON START --->
+    <a href="#!" class="control-slider btn-left">
+     <i class="fa fa-hand-o-left" style="font-size:24px;color:red"></i>
+    </a>
+    <a href="#!" class="control-slider btn-right">
+     <i class="fa fa-hand-o-right" style="font-size:24px;color:red"></i>
+    </a>
+  <!-- SECTION 09: TESTIMONIALS LEFT/RIGHT ICON END --->
+
+  </div><!-- SECTION 09: TESTIMONIALS CONTAINER END --->
+</div><!-- SECTION 09: CLASS TESTIMONIALS END --->
+
+<!----------------------- SECTION 09:  TESTIMONIALS END ------------------------>
+<br>
+
+<!----------------------- SECTION 10: IMAGE OF LOCATION/MAP START ------------------------>
+
+<div class="image-container "> <!-- SECTION 10: IMAGE OF LOCATION/MAP CONTAINER START --->
+  <div class="container1"><!-- SECTION 10: IMAGE OF LOCATION/MAP CONTAINER1 START --->
+
+  <svg viewBox="0 0 960 300"><!-- SECTION 10: IMAGE OF LOCATION/MAP SVG START --->
+    <symbol id="s-text">
+      <text text-anchor="middle" x="50%" y="65%">GORLE</text>
+    </symbol>
+
+    <g>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+    </g>
+  </svg><!-- SECTION 10: IMAGE OF LOCATION/MAP SVG END --->
+</div><!-- SECTION 10: IMAGE OF LOCATION/MAP CONTAINER1 END --->
+</div><!-- SECTION 10: IMAGE OF LOCATION/MAP CONTAINER END --->
+
+<!----------------------- SECTION 10: IMAGE OF LOCATION/MAP END ------------------------>
+
+<!----------------------- SECTION 11: FOOTER START ------------------------>
+  
+    <footer class="site-footer"> <!-- SECTION 11: SITE FOOTER START -->
+
+      <div class="container"> <!-- SECTION 11: FOOTER CONTAINER START -->
+
+        <div class="row"><!-- SECTION 11: ROW START -->
+
+
+          <!-- SECTION 11: ROW 01 -->
+          <div class="col-sm-12 col-md-6">
+            <h6>It's all about the event's.</h6>
+            <p class="text-justify text-white">For More Information? Leave us a message to get started.</p>
+          </div>
+
+          <!-- SECTION 11: ROW 02 -->
+          <div class="col-xs-6 col-md-3">
+            <h6>Services</h6>
+            <ul class="footer-links">
+              <li><a href="services.html">Event Management</a></li>
+              <li><a href="services.html">E-mail Marketing</a></li>
+              <li><a href="services.html">Web Surveys</a></li>
+            </ul>
+          </div>
+           
+          <!-- SECTION 11: ROW 03 -->
+          <div class="col-xs-6 col-md-3">
+            <h6>pages</h6>
+            <ul class="footer-links">
+              
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              
+            </ul>
+          </div>
+
+
+        </div><!-- SECTION 11: ROW END -->
+        <hr><!-- SECTION 11: HR TAG -->
+     </div><!-- SECTION 11: FOOTER CONTAINER START -->
+
+
+
+      <div class="container"><!-- SECTION 11: FOOTER COPYRIGHT START -->
+
+
+        <div class="row"><!-- SECTION 11: FOOTER COPYRIGHT ROW START -->
+       
+           <!-- SECTION 11: FOOTER COPYRIGHT ROW 1 -->
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text text-white">Copyright &copy; 2022 All Rights Reserved by 
+            <a href="index.html">Gorle Event's</a>.
+            </p>
+          </div>
+          
+          <!-- SECTION 11: FOOTER COPYRIGHT ROW 2 -->
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+            
+            </ul>
+          </div>
+
+
+        </div><!-- SECTION 11: FOOTER COPYRIGHT ROW END -->
+      </div><!-- SECTION 10: FOOTER COPYRIGHT END -->
+
+
+</footer><!-- SECTION 11: SITE FOOTER END -->
+
+<!----------------------- SECTION 10: FOOTER END ------------------------>
+
+
+
+<!----------------------- JAVASCRIPT ------------------------>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

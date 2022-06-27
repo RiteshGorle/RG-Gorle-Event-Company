@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Gorle Event Company</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--------------------------------------------------->
+<!--------------------- W3 SCHOOL ------------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+
+<!--------------------------------------------------->
+<!--------------------- BOOTSTRAP 4 ----------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--------------------------------------------------->
+<!--------------------- FAVICON IMAGE --------------->
+<!--------------------------------------------------->
+<link rel="icon" type="image/x-icon" href="logo1.png">
+
+<!--------------------------------------------------->
+<!--------------------- FONT AWESOME ---------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--------------------------------------------------->
+<!------------------------ CSS ---------------------->
+<!--------------------------------------------------->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style>
+  
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+h4{
+  font-size: 16px;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.btn:hover {
+  background-color: red;
+  border-radius: 20px;
+}
+
+.btn.active {
+  background-color: #46d246;
+  color: white;
+  border-radius: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  
+
+  h1 {
+  font-size: 30px;
+  word-break: break-all;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+
+  <!------------------------ SECTION 01: PRELOADER START ------------------------------------------>
+
+    <div id="preloader"> <!-------- PRELOADER ID START ------->
+
+      <div id="container" class="container-preloader"> <!-------- PRELOADER CONTAINER START ------->
+
+        <div class="animation-preloader"> <!-------- PRELOADER ANIMATION START ------->
+         
+          <div class="txt-loading"> <!-------- PRELOADER TEXT START ------->
+
+            <span preloader-text="G" class="characters">G</span>
+            
+            <span preloader-text="O" class="characters">O</span>
+            
+            <span preloader-text="R" class="characters">R</span>
+            
+            <span preloader-text="L" class="characters">L</span>
+            
+            <span preloader-text="E" class="characters">E</span>
+            
+           
+            <div class="preloader"> <!-------- PRELOADER IMAGE START ------->
+                <img src="spin.png" border="0">
+            </div><!-------- PRELOADER IMAGE END ------->
+
+
+          </div><!-------- PRELOADER TEXT END ------->
+        </div> <!-------- PRELOADER ANIMATION END ------->
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+      </div><!-------- PRELOADER CONTAINER END ------->
+    </div><!-------- PRELOADER ID END ------->
+
+<!------------------------ SECTION 01: PRELOADER END ------------------------------------------>
+
+
+
+
+<!------------------------ SECTION 02: NAVIGATION BAR START ----------------------------------->
+
+<div class="w3-top fixed-top"><!-------- SECTION 02 TOP START ------->
+
+  <div class="w3-bar w3-black w3-card"><!-------- SECTION 02 BAR START ------->
+
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item  w3-padding-large" ><img src="logo1.png" alt="Logo" style="width:30px;"></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="services.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+    <a href="Blog.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOG</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+
+  <div class="w3-dropdown-content w3-bar-block w3-card-4"> <!--- SECTION 02  DROPDOWN START ---->
+        <a href="services.html" class="w3-bar-item w3-button">Event Management</a>
+        <a href="services.html" class="w3-bar-item w3-button">E-mail Marketing</a>
+        <a href="services.html" class="w3-bar-item w3-button">Web Surveys</a>
+      </div><!--- SECTION 02  DROPDOWN END ---->
+
+    </div><!-------- SECTION 02 BAR END ------->
+
+
+<!-------- SECTION 02 SIGN UP BUTTON ------->
+    <button class="button1 w3-padding-large w3-hover-red w3-hide-small w3-right" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+
+<!-------- SECTION 02 SIGN UP BUTTON MODAL START------->
+    <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1 class="text-success">Sign Up</h1>
+      <p class="text-success">Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label class="text-success">
+    <input  type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+      </label>
+
+
+ <p class="text-success">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button  type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-------- SECTION 02 SIGN UP BUTTON MODAL END------->
+
+  </div><!-------- SECTION 02 BAR END ------->
+</div><!-------- SECTION 02 TOP END ------->
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+ <a href="services.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICES</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!------------------------ SECTION 02: NAVIGATION BAR END ----------------------------------->
+
+
+
+<!------------------------ SECTION 03: GLOWING TEXT AND PNG START -------------------------->
+
+ <section class="sec3"> <!------ SECTION 03: GLOWING TEXT AND PNG SECTION START ------>
+
+<h1 class="glow mt-5">GORLE EVENTS </h1> <!------ GLOWING TEXT ------>
+
+<br>
+<br> 
+<br>
+
+
+
+<!------------------------ BLOG SECTION START --------------------------> 
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1 align="Center" style="color:#46d246;">OUR BLOGS</h1>
+<hr>
+
+<h3 align="Center" style="font-weight: 600;">सेवा परमो धर्म:</h3>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Events')"> Events</button>
+  <button class="btn" onclick="filterSelection('Work')"> Work</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Events">
+    <div class="content">
+      <img src="event1.png" alt="event" style="width:100%">
+      <h4>Engagement Party</h4>
+     
+    </div>
+  </div>
+  <div class="column Events">
+    <div class="content">
+    <img src="event2.png" alt="event" style="width:100%">
+      <h4>Wedding Ceremony and Reception</h4>
+      
+    </div>
+  </div>
+  <div class="column Events">
+    <div class="content">
+    <img src="event3.png" alt="event" style="width:100%">
+      <h4>Bridal Shower or Couples' Shower</h4>
+     
+    </div>
+  </div>
+  
+  <div class="column Work">
+    <div class="content">
+      <img src="wedding.png" alt="work" style="width:100%">
+      <h4>Ring Ceremony</h4>
+     
+    </div>
+  </div>
+  <div class="column Work">
+    <div class="content">
+    <img src="social.jpg" alt="work" style="width:100%">
+      <h4>Bachelor Party</h4>
+      
+    </div>
+  </div>
+  <div class="column Work">
+    <div class="content">
+    <img src="corporate.jpg" alt="work" style="width:100%">
+      <h4>Rehearsal Dinner</h4>
+      
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="logo2.jpg" alt="people" style="width:100%">
+      <h4 align="Center">Bunty</h4>
+      
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="ritu.jpg" alt="people" style="width:100%">
+      <h4 align="Center">Ritu</h4>
+      
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="politician.jpg" alt="people" style="width:100%">
+      <h4 align="Center">Hanumanta</h4>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+<!------------------------ BLOG SECTION END --------------------------> 
+
+
+<!------------------------ BLOG SECTION JAVASCRIPT START --------------------------> 
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script> 
+<!------------------------ BLOG SECTION JAVASCRIPT START --------------------------> 
+
+</section><!------ SECTION 03: GLOWING TEXT AND PNG SECTION END ------>
+ <br>
+ <br>
+ <br>
+
+
+
+<!----------------------- SECTION 11: FOOTER START ------------------------>
+  
+    <footer class="site-footer"> <!-- SECTION 11: SITE FOOTER START -->
+
+      <div class="container"> <!-- SECTION 11: FOOTER CONTAINER START -->
+
+        <div class="row"><!-- SECTION 11: ROW START -->
+
+
+          <!-- SECTION 11: ROW 01 -->
+          <div class="col-sm-12 col-md-6">
+            <h6>It's all about the event's.</h6>
+            <p class="text-justify text-white">For More Information? Leave us a message to get started.</p>
+          </div>
+
+          <!-- SECTION 11: ROW 02 -->
+          <div class="col-xs-6 col-md-3">
+            <h6>Services</h6>
+            <ul class="footer-links">
+              <li><a href="services.html">Event Management</a></li>
+              <li><a href="services.html">E-mail Marketing</a></li>
+              <li><a href="services.html">Web Surveys</a></li>
+            </ul>
+          </div>
+           
+          <!-- SECTION 11: ROW 03 -->
+          <div class="col-xs-6 col-md-3">
+            <h6>pages</h6>
+            <ul class="footer-links">
+              
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              
+            </ul>
+          </div>
+
+
+        </div><!-- SECTION 11: ROW END -->
+        <hr><!-- SECTION 11: HR TAG -->
+     </div><!-- SECTION 11: FOOTER CONTAINER START -->
+
+
+
+      <div class="container"><!-- SECTION 11: FOOTER COPYRIGHT START -->
+
+
+        <div class="row"><!-- SECTION 11: FOOTER COPYRIGHT ROW START -->
+       
+           <!-- SECTION 11: FOOTER COPYRIGHT ROW 1 -->
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text text-white">Copyright &copy; 2022 All Rights Reserved by 
+            <a href="https://www.coasterscorner.com/">Gorle Event's</a>.
+            </p>
+          </div>
+          
+          <!-- SECTION 11: FOOTER COPYRIGHT ROW 2 -->
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+            
+            </ul>
+          </div>
+
+
+        </div><!-- SECTION 11: FOOTER COPYRIGHT ROW END -->
+      </div><!-- SECTION 10: FOOTER COPYRIGHT END -->
+
+
+</footer><!-- SECTION 11: SITE FOOTER END -->
+
+<!----------------------- SECTION 10: FOOTER END ------------------------>
+
+
+
+<!----------------------- JAVASCRIPT ------------------------>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
+
+
+
